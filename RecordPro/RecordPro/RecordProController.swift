@@ -20,13 +20,6 @@ class RecordProController: UIViewController {
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
     
-    lazy var pencil = UIBezierPath(rect: waveformView.bounds)
-    lazy var firstPoint = CGPoint(x: 6, y: waveformView.bounds.midY)
-    lazy var jump: CGFloat = (waveformView.bounds.width - (firstPoint.x * 2))/200
-    let waveLayer = CAShapeLayer()
-    var traitLength: CGFloat!
-    var start: CGPoint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -186,19 +179,6 @@ class RecordProController: UIViewController {
         let minutes = (elapsedTimeInSecond / 60) % 60
         
         timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    func writeWaves(_ input:Float, _ bool: Bool) {
-        if !bool {
-            start = firstPoint
-            if timer != nil || audioRecorder != nil {
-                timer?.invalidate()
-                audioRecorder.stop()
-            }
-            return
-        } else {
-            
-        }
     }
 }
 
