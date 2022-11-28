@@ -138,7 +138,7 @@ class RecordProController: UIViewController {
                 AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
                 AVSampleRateKey: 44100.0,
                 AVNumberOfChannelsKey: 2,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+                AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
             ]
             
             // Initiate and prepare the recorder
