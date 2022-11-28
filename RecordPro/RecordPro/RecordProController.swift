@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import DSWaveformImage
+import DSWaveformImageViews
 
 class RecordProController: UIViewController {
 

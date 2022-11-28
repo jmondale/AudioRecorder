@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E492FF1E29354D5300DC6760 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = E492FF1D29354D5300DC6760 /* DSWaveformImage */; };
+		E492FF2029354D5300DC6760 /* DSWaveformImageViews in Frameworks */ = {isa = PBXBuildFile; productRef = E492FF1F29354D5300DC6760 /* DSWaveformImageViews */; };
 		F4F7AE471DACE47C003197E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7AE461DACE47C003197E6 /* AppDelegate.swift */; };
 		F4F7AE4C1DACE47C003197E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F7AE4A1DACE47C003197E6 /* Main.storyboard */; };
 		F4F7AE4E1DACE47C003197E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F7AE4D1DACE47C003197E6 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E492FF1E29354D5300DC6760 /* DSWaveformImage in Frameworks */,
+				E492FF2029354D5300DC6760 /* DSWaveformImageViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,10 @@
 			dependencies = (
 			);
 			name = RecordPro;
+			packageProductDependencies = (
+				E492FF1D29354D5300DC6760 /* DSWaveformImage */,
+				E492FF1F29354D5300DC6760 /* DSWaveformImageViews */,
+			);
 			productName = RecordPro;
 			productReference = F4F7AE431DACE47C003197E6 /* RecordPro.app */;
 			productType = "com.apple.product-type.application";
@@ -97,7 +105,7 @@
 					F4F7AE421DACE47C003197E6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = K4RQKPMFWC;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = F4F7AE3A1DACE47C003197E6;
+			packageReferences = (
+				E492FF1C29354D5300DC6760 /* XCRemoteSwiftPackageReference "DSWaveformImage" */,
+			);
 			productRefGroup = F4F7AE441DACE47C003197E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,7 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -268,10 +279,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -283,11 +295,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K4RQKPMFWC;
 				INFOPLIST_FILE = RecordPro/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.RecordPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -297,11 +312,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K4RQKPMFWC;
 				INFOPLIST_FILE = RecordPro/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.RecordPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -327,6 +345,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E492FF1C29354D5300DC6760 /* XCRemoteSwiftPackageReference "DSWaveformImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmrschmidt/DSWaveformImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E492FF1D29354D5300DC6760 /* DSWaveformImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E492FF1C29354D5300DC6760 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			productName = DSWaveformImage;
+		};
+		E492FF1F29354D5300DC6760 /* DSWaveformImageViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E492FF1C29354D5300DC6760 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			productName = DSWaveformImageViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4F7AE3B1DACE47C003197E6 /* Project object */;
 }
